@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Motion Planning</title>
+<meta charset="utf-8">
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600" rel="stylesheet" type="text/css">
+<!--[if lte IE 8]>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+<script src="js/jquery.min.js"></script>
+<script src="js/skel.min.js"></script>
+<script src="js/skel-panels.min.js"></script>
+<script src="js/init.js"></script>
+<noscript>
+<link rel="stylesheet" href="css/skel-noscript.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style-wide.css">
+</noscript>
+<!--[if lte IE 9]>
+<link rel="stylesheet" href="css/ie9.css">
+<![endif]-->
+<!--[if lte IE 8]>
+<link rel="stylesheet" href="css/ie8.css">
+<![endif]-->
+</head>
+<body>
+<div id="header" class="skel-panels-fixed">
+  <div class="top">
+    <div id="logo"> <span class="image avatar48"><img src="images/logo.jpg" alt=""></span> 
+      <h1 id="title">Collision Free Path Finding</h1>
+      <span class="byline">Arun Sai</span> 
+    </div>
+    <nav id="nav">
+      <ul>
+        <li><a href="#introduction" id="top-link" class="skel-panels-ignoreHref"><span class="icon icon-home">Introduction</span></a></li>
+        <!-- <li><a href="#projectflow" id="portfolio-link" class="skel-panels-ignoreHref"><span class="icon icon-th">Project Flow</span></a></li>-->
+        <li><a href="#code" id="contact-link" class="skel-panels-ignoreHref"><span class="icon icon-code">Code Desc</span></a></li>
+        <li><a href="#results" id="about-link" class="skel-panels-ignoreHref"><span class="icon icon-bar-chart">Results</span></a></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- <div class="bottom">
+    <ul class="icons">
+      <li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
+      <li><a href="#" class="icon icon-facebook"><span>Facebook</span></a></li>
+      <li><a href="#" class="icon icon-github"><span>Github</span></a></li>
+      <li><a href="#" class="icon icon-dribbble"><span>Dribbble</span></a></li>
+      <li><a href="#" class="icon icon-envelope"><span>Email</span></a></li>
+    </ul>
+  </div> -->
+</div>
+<div id="main">
+  <section id="introduction" class="one">
+    <div class="container small"> <!--<a href="#" class="image featured"><img src="images/pic01.jpg" alt=""></a>-->
+      <header>
+        <h2 class="alt" style="margin-top: 50px;"><strong>Introduction</strong>.</h2>
+      </header>
+      <p>Problem to be addressed here is to find a continuous, collision free path to bring a robot from an initial configuration to a goal configuration by implementing a path planning system.</p>
+      <h3 style="text-align:left;">Robot Specifications:</h3>
+      <ul style="text-align:left;">
+          <li><strong>Type of Robot model:</strong> Differential Drive.</li><p> With radius of wheels as 'r' and distance between wheels is 'L'.</p>
+            <img style="height:200px;width:270px;margin-left:250px;" src="images/DiffDrive.jpg" alt="">
+          <li><strong>Type of Motion model:</strong> Non - Holonomic.</li>
+            <h4 style="margin-left:150px;">Differential constraints for the Non-Holonomic robot model:</h4>
+            <img style="height:200px;width:270px;margin-left:250px;" src="images/diffdriveeq.jpg" alt="">
+          <li><strong>Type of Environment:</strong> 2-D with polygonal obstacles.</li>
+            <a href="#" class="image full"><img src="images/environment.jpeg" alt=""></a>
+          <li><strong>Collision Detection method:</strong> Used Shapely collision detection library.</li>
+          <li><strong>The motion planning algorithm used:</strong> Rapidly exploring Random Tree (RRT).</li>
+      </ul>
+      
+      <!-- <footer> <a href="#portfolio" class="button scrolly">Magna Aliquam</a> </footer> -->
+    </div>
+  </section>
+  <!-- <section id="projectflow" class="two">
+    <div class="container">
+      <header>
+        <h2>Project Flow</h2>
+      </header>
+      <p>Vitae natoque dictum etiam semper magnis enim feugiat convallis convallis egestas rhoncus ridiculus in quis risus amet curabitur tempor orci penatibus. Tellus erat m auris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis fusce hendrerit lacus ridiculus.</p>-->
+      <!-- <div class="row">
+        <div class="4u">
+          <article class="item"> <a href="#" class="image full"><img src="images/pic02.jpg" alt=""></a>
+            <header>
+              <h3>Ipsum Feugiat</h3>
+            </header>
+          </article>
+          <article class="item"> <a href="#" class="image full"><img src="images/pic03.jpg" alt=""></a>
+            <header>
+              <h3>Rhoncus Semper</h3>
+            </header>
+          </article>
+        </div>
+        <div class="4u">
+          <article class="item"> <a href="#" class="image full"><img src="images/pic04.jpg" alt=""></a>
+            <header>
+              <h3>Magna Nullam</h3>
+            </header>
+          </article>
+          <article class="item"> <a href="#" class="image full"><img src="images/pic05.jpg" alt=""></a>
+            <header>
+              <h3>Natoque Vitae</h3>
+            </header>
+          </article>
+        </div>
+        <div class="4u">
+          <article class="item"> <a href="#" class="image full"><img src="images/pic06.jpg" alt=""></a>
+            <header>
+              <h3>Dolor Penatibus</h3>
+            </header>
+          </article>
+          <article class="item"> <a href="#" class="image full"><img src="images/pic07.jpg" alt=""></a>
+            <header>
+              <h3>Orci Convallis</h3>
+            </header>
+          </article>
+        </div>
+      </div> -->
+    <!-- </div>
+  </section> -->
+  <section id="code" class="four">
+    <div class="container small">
+      <header>
+        <h2><strong>Code Description</strong></h2>
+      </header>
+      <h3 style="text-align:left;">RRT Non Holonomic Generator:</h3>
+        <h4 style="text-align:left;">def nearest(pt, randpt):</h4>
+        <ul style="text-align:left; margin-left:20px;">
+          <li>Parameters: List of tuples which are Points and a tuple which is a randomly generated point.</li>
+          <li>Finds the nearest point to "randpt" among the set of points and returns it.</li>
+          <li>Returns: A tuple which is point nearest to "randpt".</li>
+        </ul><h4 style="text-align:left;">Main Method:</h4>
+        <p style="text-align:left;">This part of the code does the Main part of the algorithm of Building RRT, finding shortest path from intial to goal configuration. Also plotting the environment with the shortest part found.</p>
+      <h3 style="text-align:left;">Runge - Kutta 4th order calculation:</h3>
+        <h4 style="text-align:left;">def __init__(self,pt,ul,ur):</h4>
+        <ul style="text-align:left; margin-left:20px;">
+          <li>Parameters: Point 'pt', Left wheel velocity 'ul', Right wheel velocity 'ur'.</li>
+          <li>Initialization of step size, epsilon, radius of wheel, length of axel with above parameters is done in this method. </li>
+          <li>Returns: None.</li>
+        </ul>
+        <h4 style="text-align:left;">def function(self,left_vel,right_vel,q_theta):</h4>
+        <ul style="text-align:left; margin-left:20px;">
+          <li>Parameters: Left wheel velocity 'left_vel', Right wheel velocity 'right_vel', Theta value 'q_theta'.</li>
+          <li>This is a function to compute the state transition equations of differential drive. </li>
+          <li>Returns: An array consisting of x_dot, y_dot and theta_dot computed values.</li>
+        </ul>
+        <h4 style="text-align:left;">def calculate(self,left_vel,right_vel):</h4>
+        <ul style="text-align:left; margin-left:20px;">
+          <li>Parameters: Left wheel velocity 'left_vel', Right wheel velocity 'right_vel'.</li>
+          <li>This is the main function in which Runge - Kutta 4th order calculation is done.</li>
+          <li>Returns: A tuple consisting of point obtained after integration.</li>
+        </ul>
+        <h4 style="text-align:left;">def runge_kutta(self):</h4>
+        <ul style="text-align:left; margin-left:20px;">
+          <li>Parameters: None.</li>
+          <li>It calls the calculate method for three diffrent motions straight, left, right.</li>
+          <li>Returns: An array of three tuples each corresponding to a motion as above.</li>
+          <img style="height:200px;width:270px;margin-left:250px;" src="images/Differential_DriveMoves.jpg" alt="">
+        </ul>
+      <h3 style="text-align:left;">Graph Datastructure:</h3>
+        <h4 style="text-align:left;">Class Vertex: def __init__(self,name,point):</h4>
+        <ul style="text-align:left; margin-left:20px;">
+          <li>Parameters: Name of the vertex and the point.</li>
+          <li>Used to create a vertex by giving it a name and storing its point as a tuple.</li>
+          <li>Returns: None.</li>
+        </ul>
+        <h4 style="text-align:left;">def addEdge(self,srcpoint,destpoint):</h4>
+        <ul style="text-align:left; margin-left:20px;">
+          <li>Parameters: Source point, destination point.</li>
+          <li>Adds an edge from the source point to the destination point to the graph.</li>
+          <li>Returns: None.</li>
+        </ul>
+        <h4 style="text-align:left;">def shortestPath(self, startPoint):</h4>
+        <ul style="text-align:left; margin-left:20px;">
+          <li>Parameters: Source point.</li>
+          <li>Updates the vertexmap dictionary with the shortest path from source to every other vertex.</li>
+          <li>Returns: None.</li>
+        </ul>
+        <h4 style="text-align:left;">def printShortPath(self,destpoint):</h4>
+        <ul style="text-align:left; margin-left:20px;">
+          <li>Parameters: Destination point.</li>
+          <li>Starts from the destination point and backtracks to find the shortest adjacent vertices to reach source vertex.</li>
+          <li>Returns: An array of tuples which represent the shortest path.</li>
+        </ul>
+    </div>
+  </section>
+  <section id="results" class="three">
+    <div class="container small">
+      <header>
+        <h2>Results</h2>
+      </header>
+      <!-- <a href="#" class="image featured"><img src="images/pic08.jpg" alt=""></a> -->
+      <h3 style="text-align:left;">Information about the figures:</h3>
+      <ul style="text-align:left;">
+        <li>Voilet square as shown in the environment refers to the initial configuration.</li>
+        <li>Goal configuration is represented by a voilet circle.</li>
+        <li>Lines in light blue color represent the RRT generated</li>
+        <li>Lines in green color represents the continuous, collision free path obtained from initial to goal configuration.</li>
+        <li>Other voilet polygons are the obstacles in the environment.</li>
+      </ul>
+      <article class="item"><p>Robot with initial orientation as 10 degrees.</p> <a href="#" class="image full"><img src="images/1000.jpeg" alt=""></a>
+            <header>
+              <h3>For 1000 random points, path not found.</h3>
+            </header>
+      </article>
+      <article class="item"> <a href="#" class="image full"><img src="images/10000.jpeg" alt=""></a>
+            <header>
+              <h3>For 10000 random points, path found.</h3>
+            </header>
+      </article>
+      <article class="item"> <a href="#" class="image full"><img src="images/20000.jpeg" alt=""></a>
+            <header>
+              <h3>For 20000 random points, better path found.</h3>
+            </header>
+      </article>
+      <article class="item"><p>Robot with initial orientation as 90 degrees.</p> <a href="#" class="image full"><img src="images/10000pi.jpeg" alt=""></a>
+            <header>
+              <h3>For 10000 random points, shortest possible path found.</h3>
+            </header>
+      </article>
+    </div>
+  </section>
+  
+</div>
+<div id="footer">
+  <div class="copyright">
+    <p>&copy; Arun Sai. All rights reserved.</p>
+    <ul class="menu">
+      <li>Design: HTML5</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>
